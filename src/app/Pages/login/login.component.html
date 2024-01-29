@@ -1,0 +1,12 @@
+<div class="containerr">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
+        <h2 class="h2login">Please Sign In</h2>
+        <input [(ngModel)]="email" name="email" placeholder="Email" required>
+        <input [(ngModel)]="password" name="password" type="password" placeholder="Password">
+        <p *ngIf="isErreurLogin">Identifiants Incorrect</p>
+        <h2>&nbsp;</h2>
+        <button (click)="login()">Login</button>
+    </div>
+</div>

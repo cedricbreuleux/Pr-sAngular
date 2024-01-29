@@ -1,0 +1,25 @@
+<div class="body-home">
+<div class="container-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Password</th>
+          <th><input type="text" class="text" placeholder="Rechercher"></th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr *ngFor="let user of (users$ | async); index as i;">
+            <td data-th="Email">{{user.email}}</td>
+            <td data-th="Password">{{user.password}}</td>
+            <td data-th="Rechercher"><input type="checkbox" class="checkbox" [attr.data-userId]="user.id"></td>
+          </tr>
+          <tr>
+            <td><button class="btn-table blue">Create</button></td>
+            <td><button class="btn-table yellow" (click)="update()">Update</button></td>
+            <td><button class="btn-table red"(click)="delete()" >Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
