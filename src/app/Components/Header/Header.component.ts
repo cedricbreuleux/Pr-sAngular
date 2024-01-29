@@ -33,4 +33,10 @@ export class HeaderComponent {
     this.authService.updateUserEmail('');
     this.router.navigate(['/'])
   }
+  Catalogue() {
+    this.router.navigate(['/catalogue']);
+  }
+  Documents() {
+    this.router.navigate(['/documents']);
+  };
 }

@@ -1,4 +1,12 @@
 :host {
-  display: block;
+  display: flex;
   padding-left: 79px;
+  flex-direction: column;
+}
+.ArticleCatalogue {
+  align-self: center;
+  justify-self: center;
+  margin-top: 25vh;
+  display: flex;
+  align-items: center;
 }

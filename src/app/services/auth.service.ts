@@ -17,9 +17,11 @@ export class AuthService {
     return this.isLoggedIn;
   }
 
+  // Permet de définir l'email de l'utilisateur
   updateUserEmail(email:string): void {
     this.userEmail.next(email);
   }
+  // Permet de recuperer l'email de l'utilisateur
   getUserEmail(): BehaviorSubject<string> {
     return this.userEmail;
   }

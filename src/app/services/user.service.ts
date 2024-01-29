@@ -6,16 +6,13 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
 
-  constructor() { 
-   
-  }
+  constructor() {}
 
   public users$ = new BehaviorSubject<Array<{id:number,email:string, password:string}>>([
     {id:1, email: 'cece@gmail.com', password: 'test' },
     {id:2, email: 'toto@gmail.com', password: 'toto' },
     {id:3, email: 'kevin@gmail.com', password: 'kevin' },
     {id:4, email: 'lara@gmail.com', password: 'lara' },
-
   ]);
 
   public getUsers() {

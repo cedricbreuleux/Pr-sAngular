@@ -1,7 +1,9 @@
 <div class="containerr">
+    <!-- Apelle le composant enfant et lui donne en article un element du catalogue -->
     <app-detail-produit [Article]="Catalogue[PageCatalogue]"/>
-    <div>
-        <button (click)="ArticlePrecedent()" type="button" class="precedent">Precedent</button>
-        <button (click)="ArticleSuivant()" type="button" class="suivant">Suivant</button>
+    <div class="buttonCatalogue">
+        <!-- Incremente ou décremente la Page du Catalogue -->
+        <button (click)="ArticlePrecedent()" type="button" class="precedent btn btn-primary">Precedent</button>
+        <button (click)="ArticleSuivant()" type="button" class="suivant btn btn-success">Suivant</button>
     </div>
 </div>

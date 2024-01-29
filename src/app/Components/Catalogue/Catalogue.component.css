@@ -2,3 +2,15 @@
   display: block;
   padding-left: 79px;
 }
+.containerr {
+  display: flex;
+  flex-direction: column;
+}
+.buttonCatalogue {
+  align-self: center;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 79px;
+  margin-top: 15px;
+}
