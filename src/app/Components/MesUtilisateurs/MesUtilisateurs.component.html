@@ -1,0 +1,7 @@
+<div class="Documents">
+    <div *ngFor="let hero of (Myusers | async)">
+        <div class="DocumentCard">
+            <p class="DocumentName">{{hero.superhero}}</p>
+        </div>
+    </div>
+</div>

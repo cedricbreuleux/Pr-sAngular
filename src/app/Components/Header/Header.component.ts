@@ -39,4 +39,7 @@ export class HeaderComponent {
   Documents() {
     this.router.navigate(['/documents']);
   };
+  Admin(){
+    this.router.navigate(['/Admin']);
+  }
 }
