@@ -28,7 +28,7 @@ export class HomeComponent {
           this.users$.value.forEach((element, index) => {
             if(element.id == parseInt(userId)) {
               this.users$.value.splice(index,1)
-              console.log(this.userService.getUsers())
+              console.log(this.userService.getUsers().value)
             }
           });
         }

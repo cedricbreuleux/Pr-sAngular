@@ -2,3 +2,38 @@
   display: block;
   padding-left: 79px;
 }
+.DocumentCard {
+  width: 110px;
+  height: 160px;
+  border: solid 1px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 187, 70);
+}
+.Documents {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  margin-top: 15vh;
+  justify-content: center;
+  position: relative;
+  right: 79px;
+}
+.Documents > div {
+  display: flex;
+flex-direction: column;
+}
+.btnclose {
+  border-radius: 25px;
+  font-size: 10px;
+  width: fit-content;
+  align-self: flex-end;
+  margin-bottom: 2px;
+}
+.btnarchive{
+  width: fit-content;
+  align-self: center;
+  margin-top: 2px;
+}

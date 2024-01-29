@@ -1,7 +1,14 @@
 <div class="Documents">
-    <div *ngFor="let Document of (Documents$ | async)">
-        <div class="DocumentCard">
+    <div [hidden]="!HidenPopup" *ngFor="let Document of (Documents$ | async)">
+        <div (click)="DocumentDetails(Document)" class="DocumentCard">
             <p class="DocumentName">{{Document.name}}</p>
         </div>
+    </div>
+    <div [hidden]="HidenPopup">
+        <!-- 
+            [] -> Permet d'envoyer une donnée à l'enfant
+            () -> Permet de recevoir une donnée de l'enfant
+        -->
+        <documentEnfant [documentInput]="documentParent" (ClosingPopUpOutput)="ClosePopUpParent($event)" (ArchivageOutput)="ArchiveDocumentParent($event)"/>
     </div>
 </div>

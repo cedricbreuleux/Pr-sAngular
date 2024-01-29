@@ -1,0 +1,9 @@
+<div *ngIf="documentInput" class="Documents">
+    <div>
+        <button (click)="closePopupEnfant()" class="btnclose btn btn-dark">X</button>
+        <div class="DocumentCard">
+            <p class="DocumentName">{{documentInput.name}}</p>
+        </div>
+        <button (click)="archiveDocumentEnfant(documentInput.id)" class="btnarchive btn btn-danger">Archiver</button>
+    </div>
+</div>
