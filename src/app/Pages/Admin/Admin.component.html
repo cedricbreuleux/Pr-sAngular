@@ -1,4 +1,16 @@
-<div>
+<div class="AdminMain">
     <button (click)="RefrechUser()" class="btn btn-warning">Rafraichir</button>
     <app-mes-utilisateurs/>
+    <div *ngIf="(TheSuperHeoDiscover | async)" class="infoHero">
+        <p>Hero :</p>
+        <p>{{TheSuperHeoDiscover.value?.superhero}}</p>
+        <p>Personnage :</p>
+        <p>{{TheSuperHeoDiscover.value?.characters}}</p>
+        <p>Alter ego :</p>
+        <p>{{TheSuperHeoDiscover.value?.alter_ego}}</p>
+        <p>Premiere aparition :</p>
+        <p>{{TheSuperHeoDiscover.value?.first_appearance}}</p>
+        <p>Editeur :</p>
+        <p>{{TheSuperHeoDiscover.value?.publisher}}</p>
+    </div>
 </div>

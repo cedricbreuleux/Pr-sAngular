@@ -1,3 +1,44 @@
 :host {
-  display: block;
+  display: flex;
+  padding-left: 81px;
+  justify-content: center;
+}
+.DocumentCard {
+  width: 140px;
+  height: 190px;
+  border: solid 1px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 187, 70);
+}
+.Documents {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  width: 800px;
+  margin-top: 5vh;
+}
+.infoHero {
+  position: absolute;
+  left: 13vw;
+  background-color: rgb(233, 143, 70);
+  border: solid 1px;
+  border-radius: 5px;
+  border: solid 1px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 17vh;
+
+}
+.infoHero > p {
+  max-width: 90%;
+text-align: center;
+}
+.infoHero > p:nth-child(2n + 1) {
+  color: whitesmoke;
 }

@@ -13,7 +13,10 @@ import { BehaviorSubject } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MesUtilisateursComponent {
+  // Compteur
   indexActuel:number = 0;
+
+  // Contient tous les super heros
   SuperUser: Array<{"superhero":string, "publisher":string, "alter_ego":string,
                     "first_appearance":string, "characters":string}> = [
     {
@@ -157,15 +160,44 @@ export class MesUtilisateursComponent {
         "characters":"Norrin Radd"
     }
 ]
-  Myusers= new BehaviorSubject<Array<{"superhero":string, "publisher":string, "alter_ego":string,
+
+  // Contient mes super hero
+  MySuperHero= new BehaviorSubject<Array<{"superhero":string, "publisher":string, "alter_ego":string,
   "first_appearance":string, "characters":string}>>([]);
 
-  AddNewUsers(){
+  // Contien un super hero
+  TheSuperHeo: {"superhero":string, "publisher":string, "alter_ego":string,
+  "first_appearance":string, "characters":string} | undefined
+
+  ngOnInit() {
+    this.AddNewHero();
+  }
+  // Ajoute des Heros dans Mysuperhero
+  AddNewHero(){
     if(this.indexActuel + 3 <= this.SuperUser.length){
       for (let index = this.indexActuel; index < this.indexActuel+3; index++) {
-        this.Myusers.next([...this.Myusers.value ,this.SuperUser[index]]);
+        this.MySuperHero.next([...this.MySuperHero.value ,this.SuperUser[index]]);
       }
       this.indexActuel += 3;
     }
+  }
+  // Affiche les informations d'un hero précis
+  ShowMoreInfo(superhero: string) {
+        this.SuperUser.forEach((element, index) => {
+            if(element.superhero == superhero) {
+            this.TheSuperHeo = element
+            }
+        });
+  }
+  // Return un superhero
+  RandomSuperHero(){
+        const nbr = Math.floor(Math.random() * this.SuperUser.length);
+
+        return this.SuperUser[nbr];
+  }
+
+  // Cache les informations d'un super hero
+  HideMoreInfo() {
+    this.TheSuperHeo = undefined;
   }
 }

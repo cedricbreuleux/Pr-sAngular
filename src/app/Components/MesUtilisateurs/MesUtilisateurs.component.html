@@ -1,7 +1,19 @@
 <div class="Documents">
-    <div *ngFor="let hero of (Myusers | async)">
-        <div class="DocumentCard">
+    <div *ngFor="let hero of (MySuperHero | async)">
+        <div (mouseenter)="ShowMoreInfo(hero.superhero)" (mouseleave)="HideMoreInfo()" class="Cardhero DocumentCard">
             <p class="DocumentName">{{hero.superhero}}</p>
         </div>
     </div>
+</div>
+<div *ngIf="TheSuperHeo" class="infoHero">
+    <p>Hero :</p>
+    <p>{{TheSuperHeo.superhero}}</p>
+    <p>Personnage :</p>
+    <p>{{TheSuperHeo.characters}}</p>
+    <p>Alter ego :</p>
+    <p>{{TheSuperHeo.alter_ego}}</p>
+    <p>Premiere aparition :</p>
+    <p>{{TheSuperHeo.first_appearance}}</p>
+    <p>Editeur :</p>
+    <p>{{TheSuperHeo.publisher}}</p>
 </div>
