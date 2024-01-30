@@ -8,8 +8,8 @@ import { BehaviorSubject } from 'rxjs';
   imports: [
     CommonModule,
   ],
-  templateUrl: './MesUtilisateurs.component.html',
-  styleUrl: './MesUtilisateurs.component.css',
+  templateUrl: './MesSuperHeros.component.html',
+  styleUrl: './MesSuperHeros.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MesUtilisateursComponent {

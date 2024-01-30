@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, ViewChild, AfterViewInit } from '@angular/core';
-import { MesUtilisateursComponent } from '../../Components/MesUtilisateurs/MesUtilisateurs.component';
+import { MesUtilisateursComponent } from '../../Components/MesSuperHeros/MesSuperHeros.component';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
@@ -26,7 +26,7 @@ export class AdminComponent implements AfterViewInit {
   ngAfterViewInit() {
     setInterval(() => {
      this.TheSuperHeoDiscover.next(this.mesUtilisateursComponent.RandomSuperHero());
-     console.log(this.TheSuperHeoDiscover)
+     console.log(this.TheSuperHeoDiscover.value)
     },10000)
   }
   // Ajoute des nouveaux heros

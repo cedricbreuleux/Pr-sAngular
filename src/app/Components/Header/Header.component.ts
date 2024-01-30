@@ -42,4 +42,9 @@ export class HeaderComponent {
   Admin(){
     this.router.navigate(['/Admin']);
   }
+  OnThisDay() {
+    this.router.navigate(['/OnThisDay'], 
+    {queryParams: {day:'14',month:'07'}}
+    );
+  }
 }

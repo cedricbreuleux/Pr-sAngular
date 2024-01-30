@@ -1,0 +1,8 @@
+<div class="Documents">
+    <div *ngFor="let event of (events | async)">
+        <div class="Cardhero DocumentCard">
+            <p class="DocumentName">{{event.text}}</p>
+            <p style="color: whitesmoke;" class="DocumentName">{{event.year}}</p>
+        </div>
+    </div>
+</div>
