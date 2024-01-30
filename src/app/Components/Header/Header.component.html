@@ -24,7 +24,7 @@
         </ng-template>
       </li>
       <li class="navbar-item flexbox-left">
-        <a (click)="Catalogue()" class="navbar-item-inner flexbox-left">
+        <a [routerLink]="['/Catalogue']" class="navbar-item-inner flexbox-left">
           <div class="navbar-item-inner-icon-wrapper flexbox">
           </div>
           <span class="link-text">Catalogue</span>
@@ -52,17 +52,17 @@
         </a>
       </li>
       <li class="navbar-item flexbox-left">
-        <a class="navbar-item-inner flexbox-left">
+        <a (click)="ExempleView()" class="navbar-item-inner flexbox-left">
           <div class="navbar-item-inner-icon-wrapper flexbox">
           </div>
-          <span class="link-text">Support</span>
+          <span class="link-text">Exemple View</span>
         </a>
       </li>
       <li class="navbar-item flexbox-left">
-        <a class="navbar-item-inner flexbox-left">
+        <a [routerLink]="['navbar']" class="navbar-item-inner flexbox-left">
           <div class="navbar-item-inner-icon-wrapper flexbox">
           </div>
-          <span class="link-text">Settings</span>
+          <span class="link-text">navbar</span>
         </a>
       </li>
     </ul>

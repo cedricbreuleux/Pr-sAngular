@@ -15,7 +15,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class OnThisDayComponent { 
   
-  private uRL: string = "https://en.wikipedia.org/api/rest_v1/feed/onthisday/all/"
+  private uRL: string = "https://fr.wikipedia.org/api/rest_v1/feed/onthisday/all/"
   constructor(private http:HttpClient, private route: ActivatedRoute){
   }
 
@@ -31,6 +31,7 @@ export class OnThisDayComponent {
     // fait un fetch a une api
     this.http.get<any>(this.uRL+month+day).subscribe(data =>{
       this.events.next(data.events)
+      console.log(this.events.value)
     })
   }
 }

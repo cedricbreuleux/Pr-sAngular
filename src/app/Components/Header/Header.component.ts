@@ -47,4 +47,7 @@ export class HeaderComponent {
     {queryParams: {day:'14',month:'07'}}
     );
   }
+  ExempleView(){
+    this.router.navigate(['/ViewExemple']);
+  }
 }

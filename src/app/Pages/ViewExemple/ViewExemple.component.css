@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  padding-left: 81px;
+}
+.selectexemple {
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+}
+.selectexemple > select {
+  width: 70%;
+}
+.buttondiv {
+  display: flex;
+  width: 20%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 200px;
+}
+.buttondiv > button {
+  margin:15px
+}

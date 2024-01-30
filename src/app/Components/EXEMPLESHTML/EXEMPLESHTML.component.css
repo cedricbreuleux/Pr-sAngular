@@ -1,0 +1,8 @@
+:host {
+  display: block;
+}
+.divtitreexemple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
